@@ -24,10 +24,9 @@ router.get('/', (req, res) => {
     return res.json({message: 'HI!'});
 });
 
-console.log('확인~~~');
-
 app.use('/api', [router, todosRouter]);
 
+// 에러 미들웨어
 app.use(errorHandlerMiddleware);
 
 app.listen(PORT, () => {
